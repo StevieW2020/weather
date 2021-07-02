@@ -1,0 +1,77 @@
+h1 {
+  font-family: "Libre Baskerville", serif;
+  border: 3px solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  padding: 10px 0 0 0;
+}
+
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+}
+
+.current {
+  text-align: center;
+  padding: 20px;
+}
+
+h4 {
+  font-size: 30px;
+  font-family: "Libre Baskerville", serif;
+}
+
+h5 {
+  text-decoration: underline;
+  font-family: "Libre Baskerville", serif;
+  padding: 0px 0px 10px 0px;
+}
+
+.overcast {
+  padding: 10px;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+  border: 3px solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.card-body {
+  top: 10px;
+  border: 3px solid;
+  border-radius: 20px;
+  background: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sun.cloud {
+  font-size: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Libre Baskerville", serif;
+}
+
+.current-icon {
+  padding: 20px;
+  font-size: 50px;
+}
