@@ -66,6 +66,8 @@ function changeFahrenheit(event) {
 let farrenheitTemp = document.querySelector("#fahrenheit-link");
 farrenheitTemp.addEventListener("click", changeFahrenheit);
 
+
+
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
