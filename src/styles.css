@@ -3,6 +3,7 @@ h1 {
   border: 3px solid;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 h2 {
@@ -14,11 +15,12 @@ h2 {
 h3 {
   font-family: "Libre Baskerville", serif;
   font-size: 20px;
+  text-align: center;
 }
 
 .current {
-  text-align: center;
   padding: 20px;
+  text-align: center;
 }
 
 h4 {
@@ -30,6 +32,17 @@ h5 {
   text-decoration: underline;
   font-family: "Libre Baskerville", serif;
   padding: 0px 0px 10px 0px;
+}
+
+ul {
+  margin: 100px 0px 0px 20px;
+}
+
+li {
+  font-family: "Libre Baskerville", serif;
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
 }
 
 .overcast {
@@ -73,5 +86,6 @@ a {
 
 .current-icon {
   padding: 20px;
-  font-size: 50px;
+  font-size: 100px;
+  text-align: center;
 }
