@@ -27,7 +27,13 @@ let month = months[now.getMonth()];
 let day = days[now.getDay()];
 let date = now.getDate();
 let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minute = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
 let year = now.getFullYear();
 h3.innerHTML = `${day} , ${month} ${date}, ${hour}:${minute} / ${year}`;
 
@@ -99,3 +105,4 @@ function getCurrentLocation(event) {
 }
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentLocation);
+
