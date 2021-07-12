@@ -4,6 +4,7 @@ h1 {
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  background: tan;
 }
 
 h2 {
@@ -59,6 +60,7 @@ li {
   border: 3px solid;
   border-radius: 20px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background: tan;
 }
 .card-body {
   top: 10px;
@@ -71,6 +73,8 @@ li {
     rgb(21, 186, 196) 100.3%
   );
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .sun.cloud {
@@ -78,9 +82,13 @@ li {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+
   padding: 60px 30px;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/813/original/156508091-e1388734902591.jpg?1626118639);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 a {
