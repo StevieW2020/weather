@@ -8,8 +8,7 @@ h1 {
 
 h2 {
   font-family: "Libre Baskerville", serif;
-  font-size: 40px;
-  padding: 10px 0 0 0;
+  font-size: 35px;
 }
 
 h3 {
@@ -19,8 +18,14 @@ h3 {
 }
 
 .current {
-  padding: 20px;
   text-align: center;
+  padding: 30px 20px 20px 20px;
+}
+
+.detail {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 h4 {
@@ -86,6 +91,6 @@ a {
 
 .current-icon {
   padding: 20px;
-  font-size: 100px;
+  font-size: 90px;
   text-align: center;
 }

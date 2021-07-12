@@ -33,9 +33,15 @@ h3.innerHTML = `${day} , ${month} ${date}, ${hour}:${minute} / ${year}`;
 
 function showTemperature(response) {
   let temperatureElement = document.querySelector(".temperature");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let cityElement = document.querySelector("#city");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${response.data.name}`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  cityElement.innerHTML = `${response.data.name}`;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 function searching(event) {
   event.preventDefault();
@@ -65,8 +71,6 @@ function changeFahrenheit(event) {
 }
 let farrenheitTemp = document.querySelector("#fahrenheit-link");
 farrenheitTemp.addEventListener("click", changeFahrenheit);
-
-
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
