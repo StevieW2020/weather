@@ -36,9 +36,9 @@
                 <div class="row">
                     <div class="col">
                       <input
-                        id="change-city"
+                        id="city-input"
                         class="form-control form-control-lg"
-                        type="text"
+                        type="search"
                         placeholder="Search city"
                         autocomplete="off"
                         />
@@ -48,18 +48,12 @@
                         type="submit"
                         value="Search"
                         class="btn btn-primary btn-lg"
-                        id="search-city"
                       >
-                    </input>
                     </div>
-                    <div class="col">
-                      <button id="current-button" type="button" class="btn btn-success btn-lg">Current Location 🚩</button>
-                    </div>
-                  </div>
                 </form>
               <br />
 
-                <h3><span id="date">11:44 AM</span></h3> 
+                <span id="date"><h3>11:44 AM</h3></span> 
 
                  <h1><strong>Current City</strong></h1>
 
@@ -79,14 +73,14 @@
                     </div>
                       <div class="col">
                       <div class="current">
-                     <h2 id="city">St John's</h2>
+                     <h2 id="city"></h2>
                       <br />
                       <h4>
-                       <div class="switch">
-                        <span class="temperature">12</span>
+                       
+                        <span id="temperature">12</span>
                          <a href="#" id="celsius-link">°C</a> /
                          <a href="#" id="fahrenheit-link">°F</a>
-                       </div>
+                       
                       </h4>
                      </div>
                     </div>
