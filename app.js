@@ -37,6 +37,36 @@ if (minute < 10) {
 let year = now.getFullYear();
 h3.innerHTML = `${day} , ${month} ${date}, ${hour}:${minute} / ${year}`;
 
+function displayOvercast() {
+  let overcastElement = document.querySelector("#overcast");
+
+  let overcastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    overcastHTML =
+      overcastHTML +
+      `
+  
+    <div class="col">
+      <div class="weather-overcast-date">${day}</div>
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="50"
+      />
+      <div class="weather-overcast-temperature">
+        <span class="weather-overcast-temperature-max"> 11° </span>
+        /
+        <span class="weather-overcast-temperature-min"> 9° </span>
+      </div>
+    </div>
+    `;
+  });
+
+  overcastHTML = overcastHTML + `</div>`;
+  overcastElement.innerHTML = overcastHTML;
+}
+
 function showTemperature(response) {
   let temperatureElement = document.querySelector(".temperature");
   let descriptionElement = document.querySelector("#description");
@@ -105,3 +135,5 @@ function getCurrentLocation(event) {
 }
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getCurrentLocation);
+
+displayOvercast();
