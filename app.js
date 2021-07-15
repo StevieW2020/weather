@@ -36,31 +36,43 @@ function formateDate(timestamp) {
   let year = date.getFullYear();
   return `${day} , ${month}, ${hour}:${minute} / ${year}`; 
 }
+
+function formateDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+  return days[day];
+}
 function displayOvercast(response) {
+  let overcast = response.data.daily;
+
   let overcastElement = document.querySelector("#overcast");
 
-  let days = ["Thur", "Fri", "Sat", "Sun"];
+  
 
   let overcastHTML = `<div class="row">`;
   
-  days.forEach(function (day) {
+  overcast.forEach(function (overcastDay, index) {
+    if (index < 6) {
     overcastHTML =
       overcastHTML +
       `
        <div class="col">
-        <div class="weather-overcast-date">${day}</div>
+        <div class="weather-overcast-date">${formateDay(overcastDay.dt)}</div>
         <img
-         src="http://openweathermap.org/img/wn/50d@2x.png"
+         src="http://openweathermap.org/img/wn/${overcastDay.weather[0].icon}2x.png"
          alt=""
          width="50"
         />
         <div class="weather-overcast-temperature">
-         <span class="weather-overcast-temperature-max"> 11° </span>
+         <span class="weather-overcast-temperature-max"> ${Math.round(overcastDay.temp.max)}° </span>
          /
-         <span class="weather-overcast-temperature-min"> 9° </span>
+         <span class="weather-overcast-temperature-min"> ${Math.round(overcastDay.temp.min)}° </span>
         </div>
        </div>
       `;
+      }
     });
 
   overcastHTML = overcastHTML + `</div>`;
@@ -73,7 +85,7 @@ function getOvercast(coordinates); {
   axios.get(apiUrl).then(displayOvercast);
 }
 
-function showTemperature(response) {
+function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
