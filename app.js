@@ -61,7 +61,7 @@ function displayOvercast(response) {
        <div class="col">
         <div class="weather-overcast-date">${formateDay(overcastDay.dt)}</div>
         <img
-         src="http://openweathermap.org/img/wn/${overcastDay.weather[0].icon}2x.png"
+         src="http://openweathermap.org/img/wn/${overcastDay.weather[0].icon}@2x.png"
          alt=""
          width="50"
         />
