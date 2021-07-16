@@ -34,7 +34,7 @@ function formateDate(timestamp) {
   ];
   let month = months[date.getMonth()];
   let year = date.getFullYear();
-  return `${day} , ${month}, ${hour}:${minute} / ${year}`; 
+  return `${day} , ${month}, ${hours}:${minutes} / ${year}`;
 }
 
 function formateDay(timestamp) {
@@ -49,37 +49,41 @@ function displayOvercast(response) {
 
   let overcastElement = document.querySelector("#overcast");
 
-  
-
   let overcastHTML = `<div class="row">`;
-  
+
   overcast.forEach(function (overcastDay, index) {
     if (index < 6) {
-    overcastHTML =
-      overcastHTML +
-      `
+      overcastHTML =
+        overcastHTML +
+        `
        <div class="col">
         <div class="weather-overcast-date">${formateDay(overcastDay.dt)}</div>
         <img
-         src="http://openweathermap.org/img/wn/${overcastDay.weather[0].icon}@2x.png"
+         src="http://openweathermap.org/img/wn/${
+           overcastDay.weather[0].icon
+         }@2x.png"
          alt=""
          width="50"
         />
         <div class="weather-overcast-temperature">
-         <span class="weather-overcast-temperature-max"> ${Math.round(overcastDay.temp.max)}° </span>
+         <span class="weather-overcast-temperature-max"> ${Math.round(
+           overcastDay.temp.max
+         )}° </span>
          /
-         <span class="weather-overcast-temperature-min"> ${Math.round(overcastDay.temp.min)}° </span>
+         <span class="weather-overcast-temperature-min"> ${Math.round(
+           overcastDay.temp.min
+         )}° </span>
         </div>
        </div>
       `;
-      }
-    });
+    }
+  });
 
   overcastHTML = overcastHTML + `</div>`;
   overcastElement.innerHTML = overcastHTML;
 }
 
-function getOvercast(coordinates); {
+function getOvercast(coordinates) {
   let apiKey = "f45e557c26b84f8d37509b2f9860a5f0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayOvercast);
